@@ -2,12 +2,19 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend project for summer project 2026",
-  "main": "index.js",
+  "main": "TaskMovie.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon TaskMovie.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
