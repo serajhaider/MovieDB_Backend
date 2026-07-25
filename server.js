@@ -1,5 +1,5 @@
 const express = require('express');
-
+const verifyToken = require('./src/Middlewares/VerifyToken');
 const cors = require('cors');
 
 const connectDB = require('./src/config/db');
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/tasks', taskRoutes);
-app.use('/movies', movieRoutes);
+app.use('/movies',verifyToken, movieRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
